@@ -1,0 +1,33 @@
+﻿<Window x:Class="Coding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock Text="Исходный текст:"/>
+        <TextBox x:Name="Input" TextChanged="Input_TextChanged"/>
+       
+        <TextBlock Text="Биты исходного текста:"/>
+        <TextBlock x:Name="Bits"/>
+
+        <TextBlock Text="Длина:"/>
+        <TextBlock x:Name="Length1"/>
+
+        <TextBlock Text="Закодированный текст:"/>
+        <TextBox x:Name="EncodedText" IsReadOnly="True"/>
+
+        <TextBlock Text="Биты закодированного текста:"/>
+        <TextBlock x:Name="EncodedBits"/>
+
+        <TextBlock Text="Длина:"/>
+        <TextBlock x:Name="Length2"/>
+
+        <TextBlock Text="Раскодированный текст:"/>
+        <TextBlock x:Name="DecodedText"/>
+
+        <TextBlock x:Name="Check"/>
+    </StackPanel>
+</Window>
