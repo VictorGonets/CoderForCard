@@ -129,11 +129,12 @@ namespace Coding
 
         private string ConvertBytesToString(byte[] bytes)
         {
-            string encodedText = "";
-            foreach (byte b in bytes)
-            {
-                encodedText += (char)b;
-            }
+            string encodedText = Encoding.UTF7.GetString(bytes);
+            //string encodedText = "";
+            //foreach (byte b in bytes)
+            //{
+            //    encodedText += (char)b;
+            //}
 
             return encodedText;
         }
