@@ -22,7 +22,8 @@ namespace Coding
             { '7', "1000" },
             { '8', "1001" },
             { '9', "1010" },
-            { '#', "1011" }
+            { '#', "1011" },
+            { '?', "1100" }
         };
 
         public MainWindow()
@@ -64,7 +65,7 @@ namespace Coding
 
         private bool CheckValidText(string text)
         {
-            return !Regex.IsMatch(text, @"[^\d#]+");
+            return !Regex.IsMatch(text, @"[^\d#?]+");
         }
 
         private byte[] Encode(string text)
@@ -96,7 +97,7 @@ namespace Coding
 
         private string Decode(string text)
         {
-            byte[] bytes = Encoding.UTF8.GetBytes(text);
+            byte[] bytes = Encoding.Unicode.GetBytes(text);
             List<string> bitsString = new List<string>();
             foreach (byte b in bytes)
             {
